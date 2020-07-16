@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f6f9;
+    padding: 3rem 2rem 7rem;
+    min-width: 320px;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+    body {
+        padding: 3rem 1rem 7rem;
+    }
+}
+
+a, button {
+    outline-color: #715bc4;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.users-table-wrap {
+    overflow-x: auto;
+    border-radius: 3px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.users-table-wrap::-webkit-scrollbar {
+    height: 5px;
+    margin-right: 5px;
+    padding-right: 5px;
+    border-radius: 2.5px
+}
+			
+.users-table-wrap:-webkit-scrollbar-track {
+	background: #fff
+}
+
+.users-table-wrap::-webkit-scrollbar-thumb {
+    background: #715bc4;
+    border-radius: 2.5px;
+}
+
+.users-table {
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.users-table__headers tr th:not(:last-child) {
+    text-align: left;
+}
+
+.users-table__headers tr th button {
+    background-color: transparent;
+    border: 0;
+    color: #939aa2;
+    transition: color .3s ease;
+    padding: 0;
+}
+
+.users-table__headers tr th button:hover {
+    color: #715bc4;
+}
+
+.users-table__list tr td:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.users-table__list tr td.exception {
+    justify-content: flex-start;
+}
+
+.users-table__list tr td button {
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: .5rem;
+}
+
+.users-table__list tr td button {
+    position: relative;
+}
+
+.users-table__list tr td button::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.users-table__list tr td button img {
+    width: 25px;
+}
+
+.users-table__list tr img {
+    width: 50px;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.users-table__headers tr {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+th, td {
+    padding: 1rem 1rem;
+    color: #939aa2;
+    white-space: nowrap;
+}
+
+.users-table__list tr td {
+    padding: .5rem 1rem;
+}
+
+td a {
+    color: #939aa2;
+    text-decoration: none;
+}
+
+td a:hover {
+    transition: color .3s ease;
+    color: #715bc4;
+}
+
+.error {
+    color: red;
+}
+
+.popup-bg {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0,0,0,.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.popup-wrap {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem 1rem 1rem;
+    border-radius: 3px;
+    position: relative;
+}
+
+.popup__btn-close {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    border: 0;
+    padding: .25rem;
+    width: 42px
+}
+
+.popup__list-info {
+    color: #939aa2;
+}
+
+.popup__list-info dd {
+    padding-left: 1rem;
+}
+.popup__list-info dt:not(:first-child) {
+    padding-top: .5rem;
+}
+.popup__list-info dd:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: .5rem;
+}
+
+.form-add-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-add-user input {
+    border: 1px solid #e2e2e2;
+    margin-right: 1rem;
+    max-width: 200px;
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+}
+
+.form-add-user_btn {
+    background-color: #715bc4;
+    border: 0;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    box-shadow: 0 5px 6px -3px rgba(0, 0, 0, 0.4);
+    outline: none;
+    transition: all .3s ease;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.form-add-user_btn:hover {
+    background-color: #574695;
+}
+
+.form-add-user_btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 6px -3px rgba(0, 0, 0, 0.4);
+}
+
+.form-add-user_btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 6px -3px rgba(0, 0, 0, 0.4);
+}
+
+
+@media screen and (max-width: 768px) {
+    .form-add-user {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-add-user_btn {
+        margin-left: 0;
+    }
+    .form-add-user input {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}

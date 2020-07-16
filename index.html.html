@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="users-table-wrap">
+            <table class="users-table" id="userTable">
+                <thead class="users-table__headers">
+                    <tr>
+                        <th width="25%">
+                            <button data-action="SORT_BY_NAME" title="Sort list by name">
+                                Name
+                        </button></th>
+                        <th width="20%">
+                            <button data-action="SORT_BY_USERNAME" title="Sort list by username">
+                                Username
+                            </button>
+                        </th>
+                        <th width="25%">
+                            <button data-action="SORT_BY_EMAIL" title="Sort list by email">
+                                Email
+                            </button>
+                        </th>
+                        <th width="15%">
+                            <button data-action="SORT_BY_WEBSITE" title="Sort list by website">
+                                Website
+                            </button>
+                        </th>
+                        <th width="15%">Operation</th>
+                    </tr>
+                </thead>
+                <tbody class="users-table__list" id="usersTableList">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
